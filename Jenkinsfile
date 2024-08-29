@@ -19,13 +19,13 @@ pipeline {
 						sh '''
 							export PRO_VERSION=$(mvn org.apache.maven.plugins:maven-help-plugin:3.2.0:evaluate -Dexpression=project.version -q -DforceStdout)
 							echo $PRO_VERSION
-							mvn versions:set -DnewVersion="${PRO_VERSION}"-${BUILD_ID}
+							mvn versions:set -DnewVersion="${PRO_VERSION}"-${BUILD_ID} -s settings.xml
 							cat pom.xml
 						'''
 					} else {
 						sh '''
 							export PRO_VERSION=$(mvn org.apache.maven.plugins:maven-help-plugin:3.2.0:evaluate -Dexpression=project.version -q -DforceStdout)
-							mvn versions:set -DnewVersion=${PRO_VERSION}-SNAPSHOT
+							mvn versions:set -DnewVersion=${PRO_VERSION}-SNAPSHOT -s settings.xml
 							cat pom.xml
 						'''
 					}
@@ -37,11 +37,11 @@ pipeline {
 				script { 
 					if (branch == 'main' || branch == 'dev'){
 						sh '''
-							mvn clean deploy
+							mvn clean deploy -s settings.xml
 						'''
 					} else {
 						sh '''
-							mvn clean install
+							mvn clean install -s settings.xml
 						'''
 					}
 				}
