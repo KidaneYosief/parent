@@ -6,7 +6,7 @@
 		<mirror>	
 			<id>nexus</id>
 			<mirrorOf>*</mirrorOf>
-			<url>http://http://10.11.110.159/:8081/repository/maven-group/</url>
+			<url>http://10.11.110.159/:8081/repository/maven-group/</url>
 		</mirror>
 	</mirrors>	
 	<profiles>
@@ -15,7 +15,7 @@
             <repositories>
                 <repository>
                     <id>deploymentSnapshot</id>
-                    <url>http://http://10.11.110.159/:8081/repository/maven-group/</url>
+                    <url>http://10.11.110.159/:8081/repository/maven-group/</url>
                     <releases>
                         <enabled>true</enabled>
                         <updatePolicy>always</updatePolicy>
@@ -29,38 +29,7 @@
             <pluginRepositories>
                 <pluginRepository>
                     <id>deploymentLibrary</id>
-                    <url>http://http://10.11.110.159/:8081/repository/maven-group/</url>
-                    <releases>
-                        <enabled>true</enabled>
-                        <updatePolicy>always</updatePolicy>
-                    </releases>
-                    <snapshots>
-                        <enabled>true</enabled>
-                        <updatePolicy>always</updatePolicy>
-                    </snapshots>
-                </pluginRepository>
-            </pluginRepositories>
-        </profile>
-        <profile>
-            <id>central</id>
-            <repositories>
-                <repository>
-                    <id>deploymentSnapshot</id>
-                    <url>https://repo1.maven.org/maven2/</url>
-                    <releases>
-                        <enabled>true</enabled>
-                        <updatePolicy>always</updatePolicy>
-                    </releases>
-                    <snapshots>
-                        <enabled>true</enabled>
-                        <updatePolicy>always</updatePolicy>
-                    </snapshots>
-                </repository>
-            </repositories>
-            <pluginRepositories>
-                <pluginRepository>
-                    <id>deploymentLibrary</id>
-                    <url>https://repo1.maven.org/maven2/</url>
+                    <url>http://10.11.110.159/:8081/repository/maven-group/</url>
                     <releases>
                         <enabled>true</enabled>
                         <updatePolicy>always</updatePolicy>
