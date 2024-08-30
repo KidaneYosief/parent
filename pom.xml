@@ -29,13 +29,13 @@
           <activeByDefault>true</activeByDefault>
         </activation>
         <properties>
-          <demo-repo.version>1.0-SNAPSHOT</demo-repo.version>
+          <repo.version>1.0-SNAPSHOT</repo.version>
         </properties>
       </profile>
       <profile>
         <id>main</id>
         <properties>
-          <demo-repo.version>(1.0,)</demo-repo.version>
+          <repo.version>(1.0,)</repo.version>
         </properties>
       </profile>
     </profiles>
