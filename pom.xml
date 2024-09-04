@@ -29,7 +29,7 @@
           <activeByDefault>true</activeByDefault>
         </activation>
         <properties>
-          <repo.version>1.0-SNAPSHOT</repo.version>
+          <repo.version>1.0.0-SNAPSHOT</repo.version>
         </properties>
       </profile>
       <profile>
