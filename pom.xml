@@ -35,7 +35,7 @@
       <profile>
         <id>main</id>
         <properties>
-          <repo.version>[1.0,)</repo.version>
+          <repo.version>[1.0.0,)</repo.version>
         </properties>
       </profile>
     </profiles>
