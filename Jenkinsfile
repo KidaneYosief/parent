@@ -12,6 +12,15 @@ pipeline {
 		LANG="en_US.UTF-8"
     }
     stages {
+		stage ('Copy-Settings') {
+			steps {
+				script { 
+					sh '''
+							cp settings.xml ~/.m2/
+						'''
+				}
+			}
+		}
 		stage ('Update POM') {
 			steps {
 				script { 
